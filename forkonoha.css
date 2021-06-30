@@ -7,16 +7,27 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+body {
+  background: linear-gradient(45deg, #ffffff, #800080);
+}
+
 header {
   width: auto;
   height: 15vh;
-  background-color: aqua;
+  background-color: teal;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
   top: 0;
   position: sticky;
+}
+
+footer {
+  background-color: teal;
+  padding: 10px 15px;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .nav_links {
@@ -35,6 +46,11 @@ header {
 nav ul li a {
   text-decoration: none;
   color: black;
+}
+
+nav ul li a:hover {
+  color: orange;
+  transition: 0.2s ease;
 }
 
 .img1 {
@@ -56,6 +72,7 @@ nav ul li a {
   margin-bottom: 30px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.8);
   border-radius: 20px;
+  background-color: #ffffff;
 }
 
 .card-image {

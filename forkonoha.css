@@ -14,6 +14,7 @@ body {
 header {
   width: auto;
   height: 15vh;
+  padding: 10px 8%;
   background-color: teal;
   display: flex;
   justify-content: space-between;
@@ -30,25 +31,22 @@ footer {
   text-align: center;
 }
 
-.nav_links {
+.nav-links {
   padding-right: 20px;
-}
-
-.nav_links li {
   display: inline-block;
-  padding: 0 10px;
-  list-style-type: none;
   font-size: 1rem;
   font-weight: 550;
   letter-spacing: 1.5px;
+  order: 1;
 }
 
-nav ul li a {
+.nav-links a {
+  padding-right: 10px;
   text-decoration: none;
   color: black;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
   color: orange;
   transition: 0.2s ease;
 }
@@ -119,4 +117,45 @@ p {
   background-color: rgb(219, 123, 123);
   transition: 0.1s ease;
   transform: scale(1.02);
+}
+
+#toggle {
+  display: none;
+}
+
+label {
+  font-size: 26px;
+  margin-left: auto;
+  display: none;
+  order: 2;
+}
+
+@media only screen and (max-width: 700px) {
+  label {
+    cursor: pointer;
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    border-bottom: 1px solid white;
+    margin: 0%;
+  }
+  .container {
+    justify-content: center;
+  }
+}
+
+#toggle:checked + .nav-links {
+  display: block;
+}
+
+#toggle:checked + .nav-links a {
+  margin: 0 150px;
 }
